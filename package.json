@@ -1,0 +1,23 @@
+{
+  "name": "electron-threejs",
+  "version": "1.0.0",
+  "description": "📚 Awesome kit for Electron and ThreeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DipokalLab/electron-threejs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DipokalLab/electron-threejs/issues"
+  },
+  "homepage": "https://github.com/DipokalLab/electron-threejs#readme",
+  "devDependencies": {
+    "electron": "^18.1.0"
+  }
+}
