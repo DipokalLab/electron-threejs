@@ -19,5 +19,8 @@
   "homepage": "https://github.com/DipokalLab/electron-threejs#readme",
   "devDependencies": {
     "electron": "^18.1.0"
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1"
   }
 }
