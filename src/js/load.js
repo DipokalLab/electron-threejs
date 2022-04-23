@@ -3,15 +3,27 @@ import { Scene } from "./classes/Scene.js"
 import { Clock } from "./classes/Clock.js"
 import { Light } from "./classes/Light.js"
 import { Renderer } from "./classes/Renderer.js"
+import { Object } from "./classes/Object.js"
 
 class App {
     constructor () {
-        this.scene = new Scene(this);
-        this.camera = new Camera(this);
-        this.clock = new Clock(this);
-        this.light = new Light(this);
+        this.class = {
+            scene: new Scene(this),
+            camera: new Camera(this),
+            clock: new Clock(this),
+            light: new Light(this),
+    
+            renderer: new Renderer(this),
+            object: new Object(this)
+        }
 
-        this.renderer = new Renderer(this);
+        this.scene;
+        this.camera;
+        this.clock;
+        this.light;
+
+        this.renderer;
+        this.object;
         this.stats;
         this.loader;
 
@@ -20,13 +32,20 @@ class App {
     }
 
     init() {
-        this.scene.init()
-        this.camera.init()
-        this.clock.init()
-        this.light.init()
-        this.renderer.init()
+        this.class.clock.init()
 
-        console.log('loaded')
+        this.class.scene.init()
+        this.class.light.init()
+
+        this.class.object.add()
+
+        this.class.camera.init()
+
+        this.class.renderer.init()
+        this.class.scene.animate()
+
+
+        console.log('loaded', this)
     }
 }
 

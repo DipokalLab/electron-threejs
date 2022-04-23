@@ -12,6 +12,15 @@ class Scene {
 
 
     }
+
+    animate() {
+        requestAnimationFrame( this.animate.bind(this) );
+ 
+        const mixerUpdateDelta = this.self.clock.getDelta();
+
+
+        this.self.renderer.render( this.self.scene, this.self.camera );
+    }
 }
 
 export { Scene }
