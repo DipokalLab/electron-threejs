@@ -26,6 +26,8 @@ class App {
         this.object;
         this.stats;
         this.loader;
+        this.controls = {};
+
 
         this.container = document.getElementById( 'app' );
 
@@ -36,12 +38,15 @@ class App {
 
         this.class.scene.init()
         this.class.light.init()
+        this.class.renderer.init()
+
 
         this.class.object.add()
 
         this.class.camera.init()
 
-        this.class.renderer.init()
+        this.class.camera.controls(true)
+
         this.class.scene.animate()
 
 
