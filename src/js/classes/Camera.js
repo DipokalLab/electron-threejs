@@ -10,7 +10,7 @@ class Camera {
     init() {
 
         this.self.camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 1, 100 );
-        this.self.camera.position.set( 400, 200, 0 );
+        this.self.camera.position.set( 0, 3, -7 );
 
 
 
@@ -29,8 +29,8 @@ class Camera {
     
             this.self.controls.screenSpacePanning = false;
     
-            this.self.controls.minDistance = 100;
-            this.self.controls.maxDistance = 500;
+            this.self.controls.minDistance = 3;
+            this.self.controls.maxDistance = 20;
     
             this.self.controls.maxPolarAngle = Math.PI / 2;
         }
